@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\title{An example of using \LaTeX{} and Gnuplot: the Gamma function}
+\author{eliaszap93 }
+\date{\today}
+
+\begin{document}
+\maketitle
+\noindent In mathematics, the gamma function is one commonly used extension of the factorial function to complex numbers. 
+ The gamma function is defined for all complex numbers except the non-positive integers. 
+ For any positive integer $n$,
+\begin{equation}
+    \Gamma (n)=(n-1)!\ .
+\end{equation}
+Derived by Daniel Bernoulli, for complex numbers with a positive real part the gamma function is defined via a convergent improper integral:
+\begin{equation}
+    \Gamma (z)=\int _{0}^{\infty }x^{z-1}e^{-x} dx, \qquad \Re (z)>0
+\end{equation}
+
+\begin{figure}
+    \centering
+    \input{plot-gamma.tex}
+    \caption{this is a caption}
+\end{figure}
+
+\end{document}

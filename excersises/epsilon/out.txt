@@ -1,0 +1,12 @@
+my max int =2147483647
+int max value = 2147483647
+my min int = -2147483648
+int min value = -2147483648
+x=2.22044604925031E-16
+y=1.192093E-07
+float_sum_up=15.40368
+float_sum_down=18.80792
+double_sum_up=20.9661659719623
+double_sum_down=20.9661659733582
+is f and g equal? False
+is f and h equal? True

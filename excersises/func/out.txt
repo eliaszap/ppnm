@@ -1,0 +1,21 @@
+int_0 int_1 dx Log(x)/sqrt(x)=-3.99999969851602
+int_-inf int_+inf dx e(-x^2)=1.77245411516459 sqrt(pi)=1.77245385090552
+for p=0.5 the integral int_0 int_1 dx Log(1/x)^p=0.886228067881383 and for gamma(p+1)=0.886749590308005
+for p=1 the integral int_0 int_1 dx Log(1/x)^p=1.00000301938785 and for gamma(p+1)=1.00112646272845
+for p=1.5 the integral int_0 int_1 dx Log(1/x)^p=1.32934080610688 and for gamma(p+1)=1.32964844338629
+for p=2 the integral int_0 int_1 dx Log(1/x)^p=2.0000023300811 and for gamma(p+1)=2.00015017562812
+for p=2.5 the integral int_0 int_1 dx Log(1/x)^p=3.3233514025032 and for gamma(p+1)=3.32412110846574
+for p=3 the integral int_0 int_1 dx Log(1/x)^p=6.00000121699292 and for gamma(p+1)=6.00045052688436
+for p=3.5 the integral int_0 int_1 dx Log(1/x)^p=11.631728578007 and for gamma(p+1)=11.6344238796301
+for p=4 the integral int_0 int_1 dx Log(1/x)^p=24.000000987935 and for gamma(p+1)=24.0018021075374
+for p=4.5 the integral int_0 int_1 dx Log(1/x)^p=52.3427738618731 and for gamma(p+1)=52.3549074583354
+for p=5 the integral int_0 int_1 dx Log(1/x)^p=119.999998692763 and for gamma(p+1)=120.009010537687
+for p=5.5 the integral int_0 int_1 dx Log(1/x)^p=287.885249366484 and for gamma(p+1)=287.951991020844
+for p=6 the integral int_0 int_1 dx Log(1/x)^p=719.999845102079 and for gamma(p+1)=720.054063226123
+for p=6.5 the integral int_0 int_1 dx Log(1/x)^p=1871.25410513357 and for gamma(p+1)=1871.68794163549
+for p=7 the integral int_0 int_1 dx Log(1/x)^p=5039.99897942109 and for gamma(p+1)=5040.37844258286
+for p=7.5 the integral int_0 int_1 dx Log(1/x)^p=14034.402806728 and for gamma(p+1)=14037.6595622662
+for p=8 the integral int_0 int_1 dx Log(1/x)^p=40319.9923250333 and for gamma(p+1)=40323.0275406629
+for p=8.5 the integral int_0 int_1 dx Log(1/x)^p=119292.427924613 and for gamma(p+1)=119320.106279262
+for p=9 the integral int_0 int_1 dx Log(1/x)^p=362879.857483423 and for gamma(p+1)=362907.247865966
+for p=9.5 the integral int_0 int_1 dx Log(1/x)^p=1133278.0995822 and for gamma(p+1)=1133541.00965299
