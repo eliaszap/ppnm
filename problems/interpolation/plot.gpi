@@ -1,0 +1,17 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "x"
+set ylabel "y"
+set key bottom right
+set multiplot layout 1,2
+set title "Plot of interpolation of cos(x)"
+plot [0:14][-1.5:1.5] \
+    "out-xy.txt" with lines title "cos(x)"\
+    , "out-linterp.txt" with points pt 7 title "Linear spline"
+
+#
+set title "Plot of Integration of cos(x) and sin(x)"
+plot[0:7][-1.5:1.5] "out-lintegral.txt" using ($1):($2) with lines title "Integral(Cos(X))"\
+    , "out-lintegral.txt" using ($1):($3) with lines title "Sin(x)"
+#
+unset multiplot
