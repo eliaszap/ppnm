@@ -1,5 +1,6 @@
 // (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty.
 using System;
+using static System.Math;
 public partial class vector{
 
 private double[] data;
@@ -57,5 +58,21 @@ public bool approx(vector o){
 		if(!approx(this[i],o[i]))return false;
 	return true;
 	}
+
+public double norm(){
+	double meanabs=0;
+	for(int i=0;i<size;i++)meanabs+=Abs(this[i]);
+	meanabs/=size;
+	double sum=0;
+	for(int i=0;i<size;i++)sum+=(this[i]/meanabs)*(this[i]/meanabs);
+	return meanabs*Sqrt(sum);
+	}
+
+public double dot(vector o){
+	double sum=0;
+	for(int i=0;i<size;i++)sum+=this[i]*o[i];
+	return sum;
+	}
+
 
 }//vector

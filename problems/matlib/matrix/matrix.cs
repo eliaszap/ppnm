@@ -1,5 +1,6 @@
 // (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty.
 using System;
+using static System.Math;
 public partial class matrix{
 
 public readonly int size1, size2;
@@ -199,6 +200,31 @@ public bool equals(matrix B,double eps=1e-6){
 				return false;
 	return true;
 }
+
+public static bool approx(double a, double b, double acc=1e-6, double eps=1e-6){
+	if(Abs(a-b)<acc)return true;
+	if(Abs(a-b)/Max(Abs(a),Abs(b)) < eps)return true;
+	return false;
+}
+
+public bool approx(matrix B,double acc=1e-6, double eps=1e-6){
+	if(this.size1!=B.size1)return false;
+	if(this.size2!=B.size2)return false;
+	for(int i=0;i<size1;i++)
+		for(int j=0;j<size2;j++)
+			if(!approx(this[i,j],B[i,j],acc,eps))
+				return false;
+	return true;
+}
+
+
+public static vector operator% (matrix a, vector v){
+	var u = new vector(a.size2);
+	for(int k=0;k<a.size1;k++)
+	for(int i=0;i<a.size2;i++)
+		u[i]+=a[k,i]*v[k];
+	return u;
+	}
 
 }//matrix
 
