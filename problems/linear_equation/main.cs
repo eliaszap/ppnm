@@ -17,6 +17,7 @@ class main{
         
 
         // A.1
+        WriteLine("Assignment A.1:");
         A.print($"Matrix A {n}x{m}:");
         var qr_A = new qrdecompositionGS(A);
         var Q = qr_A.Q;

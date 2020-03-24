@@ -226,5 +226,32 @@ public static vector operator% (matrix a, vector v){
 	return u;
 	}
 
+public static void scale(matrix M,double x){
+	for(int j=0;j<M.size2;j++)
+	for(int i=0;i<M.size1;i++)
+		M[i,j]*=x;
+	}
+
+// // Inverse a Triangular matrix. unsure of it works on non-triangular. Made as in qrdecompositionGS
+// public matrix inverseTri(){
+// 		var A = this;
+//         int n = A.size1;
+//         vector e = new vector(n);
+//         for(int i = 0; i<n;i++){
+//                 e[i] = 1;
+// 				var qtb = A%e;
+// 				int ns = qtb.size;
+//         		for(int j = ns-1; j>=0;j--){
+//             		double sum = qtb[j];
+//            			for(int k = j+1; k<ns;k++){
+//                 		sum -= A[j,k]*qtb[k];
+//            			}		
+//             		qtb[j] = sum/A[j,j];
+//         		}
+//                 A[i]= qtb;
+//                 e[i]=0;
+//         }
+//     return A;
+// 	}
 }//matrix
 

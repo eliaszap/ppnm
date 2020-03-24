@@ -1,0 +1,12 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "Time [days]"
+set ylabel "Activity"
+set key top right
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title "Decay of Thx (224Ra)"
+plot [0:16][0:120] "out-data.txt" using ($1):($2) with lines title "Data"\
+    , "out-data.txt" using ($2):($3) with yerrorbars title "Error"\
+    , "out-expfit.txt" with lines title "Exponential fit"
