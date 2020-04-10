@@ -1,0 +1,12 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "x"
+set ylabel "y"
+set key top right
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title "RK12 of Sin(x) and Cos(x)"
+plot "plot.txt" using ($1):($3) with lines title "Cos(x)"\
+    , "plot.txt" using ($1):($2) with lines title "Sin(x)"\
+    

@@ -9,8 +9,8 @@ class main{
     static int Main(){
         
 
-        vector ts = new vector(new double[]{0,1,2,3,4,6,9,10,13,15});
-        vector y = new vector(new double[]{100,117,100,88,72,53,29.5,25.2,15.2,11.1});
+        vector ts = new vector(new double[]{1,2,3,4,6,9,10,13,15});
+        vector y = new vector(new double[]{117,100,88,72,53,29.5,25.2,15.2,11.1});
         vector dy = new vector(y/20);
         // WriteLine("Data and error:\n");
         System.IO.StreamWriter  data = new System.IO.StreamWriter("out-data.txt",append:false);
@@ -31,10 +31,10 @@ class main{
         double lam = c[1];
         double dlam = Sqrt(S[1,1]);
         double T = -Log(2)/lam;
-        double dT = dlam/(lam*lam);
-        WriteLine("The half-life time of Thx(224Ra) is: {0} +- {1} days",T,dT);
-            c.print("c: ");
-            S.print("S: ");
+        double dT = Abs(lam/dlam);
+        WriteLine("lambda, λ = {0} +- {1}",lam,dlam);
+        WriteLine("The half-life time of Thx(224Ra) is: T = {0} +- {1} days",T,dT);
+        WriteLine("Value from Wikipedia: 224Ra = 3.6319 +- 0.0023");
         
         System.IO.StreamWriter  efit = new System.IO.StreamWriter("out-expfit.txt",append:false);
         for(int i = 0; i<ts.size;i++){

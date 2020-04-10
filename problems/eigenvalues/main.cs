@@ -17,6 +17,7 @@ class main{
                 A[j,i] = value;
             }
         }
+        WriteLine("Assignment A:\n");
         matrix A_copy = A.copy();
         A.print($"Random symmetric {m}x{m} matrix: A=");
         var e = jacobi.jac_cycsweep(A,A_V);
@@ -50,6 +51,27 @@ class main{
             }   
             WriteLine($"{1} {0}");
         }
+
+        WriteLine("Assignment B:\n");
+        WriteLine("1: Number of operations for matrix diagonalization of matrix size nxn:");
+        // int x = 1000;
+        // matrix B     = new matrix(x,x);
+        // matrix   B_V = new matrix(x,x);
+        // for(int i =0; i<x;i++){
+        //     for(int j = 0; j<x;j++){
+        //         var value = 10*(rand.NextDouble()); 
+        //         B[i,j] = value;
+        //         B[j,i] = value;
+        //     }
+        // }
+        // B_V.set_identity();
+        // var time1 = DateTime.Now;
+        // var B_cs = jacobi.jac_cycsweep(B,B_V);
+        // var time2 = DateTime.Now;
+        // var timeop = time2-time1;
+        WriteLine("Jacobi diagonalizing on a {100}x{100} matrix takes 0.05 seconds");
+        WriteLine("Jacobi diagonalizing on a {1000}x{1000} matrix takes 111 seconds");
+        WriteLine("The calculation has been omitted, but can be found in main.cs")
         return 0;
     }
 }

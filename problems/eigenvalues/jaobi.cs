@@ -1,9 +1,11 @@
 using System;
 using static System.Math;
 public class jacobi{
+    public jacobi(){}
     public static vector jac_cycsweep(matrix A_arg, matrix V){
         var A = A_arg.copy();
-        int sweeps=0, n = A.size1;
+        int sweeps=0;
+        int n = A.size1;
         bool changed;
         vector e = new vector(n);
         for(int i=0; i<n;i++){

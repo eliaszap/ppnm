@@ -1,3 +1,5 @@
+Assignment A:
+
 Random symmetric 6x6 matrix: A=
     2.487     3.541     3.201     7.043     7.979     5.563 
     3.541     9.439     9.898     7.018     1.695     7.167 
@@ -88,3 +90,7 @@ D is a diagonal matrix with the eigenvalues in the diagonal.
 0.904761904761905 0.241278432814629
 0.952380952380952 0.133899428908232
 1 0
+Assignment B:
+
+1: Number of operations for matrix diagonalization of matrix size nxn:
+Jacobi diagonalizing on a 1000x1000 matrix takes 00:01:49.6956850 
