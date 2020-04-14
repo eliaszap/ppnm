@@ -20,30 +20,22 @@ public static class Ode{
 ) 
 {
     int n = yt.size;
-	Console.WriteLine($"after initialise n={n}");
 	vector yh = new vector(n);
-	Console.WriteLine($"after initialise yh={yh}");
 	vector hold = new vector(n);
-	Console.WriteLine($"after initialise hold={hold}");
-	yt.print($"input to k0: t= {t}, yt= ");
 	var k0 = f(t,yt);
-	Console.WriteLine($"after initialise k0={k0}");
 	for(int i = 0; i< n; i++)
-	{
+	{	
 		hold[i] = yt[i] + k0[i]*h/2;
 	}
-	Console.WriteLine("after 1. loop");
 	var k12 = f(t+h/2,hold);
 	for(int i = 0; i<n; i++)
 	{
 		yh[i] = yt[i] + k12[i]*h;
 	}
-	Console.WriteLine("after 2. loop");
 	for(int i = 0; i<n;i++)
 	{
 		err[i] = (k0[i]+ -k12[i])*h/2;
 	}
-	Console.WriteLine("after 3. loop");
 	return yh;
 }	   
 public static Result driver(
@@ -70,9 +62,7 @@ public static Result driver(
 		{
 			h = b-x;
 		}
-		// Console.WriteLine("before call to rkstep12");
 		ya = rkstep12(f,x,ya,h,err);
-		// Console.WriteLine("after call to rkstep12");
 		double sum_err = 0, sum_yh = 0;
 		for(int i = 0;i<n;i++)
 		{
@@ -100,7 +90,6 @@ public static Result driver(
 			h*=2;	
 		}
 	}
-	Console.WriteLine("before res");
 	var res = new Result(xlist,ylist);
 	return res;
 }

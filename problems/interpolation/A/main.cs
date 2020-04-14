@@ -3,7 +3,7 @@ using static System.Console;
 using static System.Math;
 class main{
     static int Main(){
-        int n = 16, N = 20; int i=0;
+        int n = 30, N = 2000; int i=0;
 
         double[] xs = new double[N];
         
@@ -23,7 +23,7 @@ class main{
         i = 0;
         double z = 0;
         for(i = 0; i<=n;i++){
-            z = 4*PI*i/(n-1);
+            z = 2*PI*i/(n-1);
             linterpfile.WriteLine("{0} {1} ",z,lspline.linterp(xs,ys,z));
         }
             linterpfile.Close();

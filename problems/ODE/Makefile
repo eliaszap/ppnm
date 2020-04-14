@@ -1,8 +1,11 @@
-all: plot.svg
+all: plotA.svg plotB.svg
 
-plot.svg: plot.gpi plot.txt
+plotA.svg: plotA.gpi plotA.txt
 	gnuplot $<
-plot.txt: main.exe
+plotB.svg: plotB.gpi plotB.txt
+	gnuplot $<
+	
+plotA.txt plotB.txt: main.exe
 	mono $<
 main.exe: main.cs ODE.dll
 	mcs $< -reference:$(word 2,$^) $<
@@ -13,4 +16,4 @@ ODE.dll: ODE.cs $(S)
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f out* *.exe
+	rm -f *.txt *.exe *.svg

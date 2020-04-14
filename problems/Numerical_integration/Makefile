@@ -7,8 +7,8 @@ out.txt: main.exe
 main.exe: main.cs integrator.dll
 	mcs $< -reference:$(word 2,$^) $<
 
-integrator.dll: integrator.cs
-	mcs -target:library -out:$@ $<
+integrator.dll: integrator.cs ../matlib/integration/quado8.cs
+	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f out* *.exe
+	rm -f out* *.exe *.dll
