@@ -6,7 +6,7 @@ class main
     {
     
     var rand = new Random(1);
-    int n = 10;
+    int n = 10; //The size of A
     matrix A = new matrix(n,n);
     for(int i = 0; i<n;i++)
     {
@@ -33,7 +33,7 @@ class main
     (A-A_again).print("A test to see if A = VTV^T by subtraction: A - VTV^T = null matrix ");
     WriteLine();
     WriteLine("Thus the Lanczos tridiagonalization algorithm for real symmetric matrices has been implemented.");
-    WriteLine("Note that the algorithm  only works for 2<=n<13, for n>14 the subtraction test fails. ");
+    WriteLine("Note that the algorithm  only works for 2<=n<13, for n>14 the subtraction test fails. n can be modified in main.cs.");
     return 0;   
     }
 
