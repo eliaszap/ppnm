@@ -59,4 +59,4 @@ A test to see if A = VTV^T by subtraction: A - VTV^T = null matrix
     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000 
 
 Thus the Lanczos tridiagonalization algorithm for real symmetric matrices has been implemented.
-Note that the algorithm  only works for 2<=n<13, for n>14 the subtraction test fails. 
+Note that the algorithm  only works for 2<=n<13, for n>14 the subtraction test fails. n can be modified in main.cs.
