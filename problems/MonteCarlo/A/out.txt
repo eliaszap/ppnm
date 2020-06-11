@@ -1,0 +1,22 @@
+Interesting integral nr. 1:
+Plain Monte carlo integrator: int_0^(π/2) int_0^(π/2) dxdy cos(x)*cos(y) = 0.997967289057821
+Integration with CAS: int_0^(π/2) int_0^(π/2) dxdy cos(x)*cos(y) = 1
+Error on plain montecarlo: 0.000722263373533061
+Actual Error to accurate solution: 0.00203271094217905 
+ 
+Interesting integral nr. 2:
+Plain Monte carlo integrator: int_0^1 int_0^1 dxdy 1/2*(x^2+y^2) = 0.333364055137788
+Integration with CAS: int_0^(π/2) int_0^(π/2) dxdy 1/2*(x^2+y^2) = 0.333333333333333
+Error on plain montecarlo: 0.00021082173428507
+Actual Error to accurate solution: -3.07218044550139E-05 
+ 
+Interesting integral nr. 3:
+Plain Monte carlo integrator: int_0^(π/2) int_0^(π) dxdy e^x*cos(y) = 22.1235047298063
+Integration with CAS:int_0^(π/2) int_0^(π) dxdy e^x*cos(y) = e^π - 1 =  22.14069
+Error on plain montecarlo: 0.0233934753618458
+Actual Error to accurate solution: 0.0171852701937141 
+ 
+∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]^-1 = Γ(1/4)4/(4π3) ≈ 1.3932039296856768591842462603255
+Plain Monte carlo integrator: ∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]-1 = Γ(1/4)4/(4π3) ≈ 1.42671835925256
+Error on plain montecarlo: 0.00619184173418041
+Actual Error to accurate solution: -0.0335144295668877 
