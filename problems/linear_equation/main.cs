@@ -50,7 +50,7 @@ class main{
             b[i]=10*(rand.NextDouble());
         }
         b.print($"Vector b with size {n}: ");
-        var qrxb= qr_A2.solve(b);
+        var qrxb= qr_A2.solve(qr_A2.Q,b);
         qrxb.print($"solve x for QRx=b:\nx = ");
         var ax = A2*qrxb;
         ax.print("Ax = "); 

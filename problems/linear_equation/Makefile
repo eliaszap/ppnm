@@ -12,4 +12,4 @@ qrdecompositionGS.dll: qrdecompositionGS.cs $(S)
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f 	out* *.exe 
+	rm -f 	out* *.exe *.dll

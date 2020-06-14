@@ -134,10 +134,26 @@ public void set_unity(){
 	}
 }
 
+public void setid(){
+	for(int i=0;i<size1;i++){
+		this[i,i]=1;
+		for(int j=i+1;j<size2;j++){ this[i,j]=0;this[j,i]=0; }
+	}
+	}
+public static matrix id(int n){
+	matrix m=new matrix(n,n); m.setid(); return m;
+	}
+
 public void set_zero(){
 	for(int j=0;j<size2;j++)
 		for(int i=0;i<size1;i++)
 			this[i,j]=0;
+	}
+	
+public void update(vector u, vector v, double s=1){
+	for(int i=0;i<size1;i++)
+	for(int j=0;j<size2;j++)
+		this[i,j]+=u[i]*v[j]*s;
 	}
 
 public static matrix outer(vector u, vector v){

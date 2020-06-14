@@ -25,6 +25,11 @@ public void print(string s=""){
 	for(int i=0;i<size;i++) System.Console.Write("{0:f3} ",this[i]);
 	System.Console.Write("\n");
 }
+public vector copy(){
+	vector b=new vector(this.size);
+	for(int i=0;i<this.size;i++)b[i]=this[i];
+	return b;
+}
 
 public static vector operator+(vector v, vector u){
 	vector r=new vector(v.size);

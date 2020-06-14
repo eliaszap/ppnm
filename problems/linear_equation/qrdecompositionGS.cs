@@ -31,8 +31,8 @@ public class qrdecompositionGS{
         return x;
     }
 
-    public vector solve(vector b){
-        var qtb = Q%b;
+    public vector solve(matrix M,vector b){
+        var qtb = M%b;
         return backsubstitution(qtb);
         
     }
@@ -46,7 +46,7 @@ public class qrdecompositionGS{
         // var Q_inv = qr_B.Q;
         for(int i = 0; i<n;i++){
                 e[i] = 1;
-                A_inv[i]= qr_B.solve(e);
+                A_inv[i]= qr_B.solve(qr_B.Q,e);
                 e[i]=0;
         }
         return A_inv;
