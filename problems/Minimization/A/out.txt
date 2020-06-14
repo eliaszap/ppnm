@@ -1,0 +1,9 @@
+The Rosenbruck Valley function: f(x,y)=(1-x)^2+100(y-x^2)^2
+Quasi newton minimum        : 1.000 1.000 
+The exact minimum           : 1.000 1.000 
+Number of steps             : 36 steps.
+
+The Himmelblau function: f(x,y)=(x^2+y-11)^2+(x+y^2-7)^2.
+Quasi newton minimum        : -3.044 0.082 
+The exact minimum           : 3.000 2.000 
+Number of steps             : 9 steps.
