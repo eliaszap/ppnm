@@ -7,5 +7,6 @@ set tics out
 set xzeroaxis
 set yzeroaxis
 set title "Higgs discovery and fit with Quasi newton minimization"
-plot  "higgs_data.txt" using ($1):($2) with lines title "Data" \
-, "higgs_data.txt" using ($1):($2):($3) with errorbar title "Error" 
+plot  "higgs_data.txt" using ($1):($2) with points pt 7  title "Data" \
+, "higgs_data.txt" using ($1):($2):($3) with errorbar title "Error" \
+, "out.error.txt" using ($1):($2) with lines ls 3 title "Fit"
