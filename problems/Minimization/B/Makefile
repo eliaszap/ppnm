@@ -17,4 +17,4 @@ minimization.dll: ../minimization.cs $(S)
 		mcs -target:library -out:$@ $^
 
 clean:
-	rm -f *.exe out* *.dll	
+	rm -f *.exe out* *.dll	*.svg
