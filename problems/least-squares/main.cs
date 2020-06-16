@@ -32,9 +32,12 @@ class main{
         double dlam = Sqrt(S[1,1]);
         double T = -Log(2)/lam;
         double dT = Abs(lam/dlam);
+        double wiki_T = 3.6319;
+        double wiki_dT = 0.0023;
         WriteLine("lambda, λ = {0} +- {1}",lam,dlam);
         WriteLine("The half-life time of Thx(224Ra) is: T = {0} +- {1} days",T,dT);
-        WriteLine("Value from Wikipedia: 224Ra = 3.6319 +- 0.0023");
+        WriteLine("Value from Wikipedia: 224Ra = {0} +- {1} days",wiki_T,wiki_dT);
+        WriteLine("Error: {0} +- {1} days", (T-wiki_T),(dT-wiki_dT));
         
         System.IO.StreamWriter  efit = new System.IO.StreamWriter("out-expfit.txt",append:false);
         for(int i = 0; i<ts.size;i++){

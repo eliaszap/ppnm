@@ -13,5 +13,5 @@ lspline.dll: lspline.cs
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f rm *.exe out* *.svg
+	rm -f rm *.exe out* *.svg *.dll
 

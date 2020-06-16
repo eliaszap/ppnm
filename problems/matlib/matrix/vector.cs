@@ -53,6 +53,14 @@ public static vector operator/(vector v, double a){
 	vector r=new vector(v.size);
 	for(int i=0;i<v.size;i++)r[i]=v[i]/a;
 	return r; }
+public static vector operator-(vector v, double a){
+	vector r = new vector(v.size);
+	for(int i =0; i<v.size;i++)
+	{
+		r[i] = v[i]-a;
+	}
+	return r;
+}
 
 public static bool approx(double x, double y, double eps=1e-9){
 	if(Math.Abs(x-y)<eps)return true;
@@ -81,5 +89,21 @@ public double dot(vector o){
 	return sum;
 	}
 
+public static vector linspace(double z0, double zend, int N){
+	var z = new vector(N);
+	for(int i=0;i<N;i++){
+        z[i] = z0+(zend-z0)/(N-1)*i;
+	}
+	return z;
+}
+public static double sum(vector x)
+{
+	double sum = 0;
+	for(int i = 0; i<x.size;i++)
+	{
+		sum += x[i];
+	}
+	return sum;
+}
 
 }//vector

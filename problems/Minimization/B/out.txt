@@ -1,2 +1,0 @@
-Parameters from fit: mass, m = 125.972186296845, widths of resonance, gamma = 2.08636112323077, and scale factor, A = 9.87644054874058
-Computed with 20 steps.

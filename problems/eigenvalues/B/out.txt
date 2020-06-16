@@ -1,0 +1,6 @@
+Assignment B:
+
+1: Number of operations for matrix diagonalization of matrix size nxn:
+Jacobi diagonalizing on a {100}x{100} matrix takes 0.05 seconds
+Jacobi diagonalizing on a {1000}x{1000} matrix takes 111 seconds
+The calculation has been omitted, but can be found in main.cs

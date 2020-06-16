@@ -7,11 +7,11 @@ out.txt: main.exe
 main.exe: main.cs jaobi.dll
 	mcs -reference:$(word 2,$^) $<	
 
-MATLIB = ../matlib
+MATLIB = ../../matlib
 S := $(MATLIB)/matrix/matrix.cs
 S += $(MATLIB)/matrix/vector.cs
-jaobi.dll: jaobi.cs  $(S)
+jaobi.dll: ../jaobi.cs  $(S)
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f rm *.exe out* *.svg
+	rm -f rm *.exe out* *.svg *.dll

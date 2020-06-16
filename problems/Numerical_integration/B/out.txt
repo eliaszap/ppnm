@@ -1,6 +1,3 @@
-Assignment A
-int_^1_0 Sqrt(x) dx = 0.666953909054655, reference= 0.666666666666667
-int_^1_0 4*Sqrt(1-x^2) = 3.14159265769177, reference=3.14159265358979
 Assignment B
 int_^1_0 1/Sqrt(x) dx = 1.99994458902502, in 580 evaluations, reference = 2.
 int_^1_0 ln(x)/Sqrt(x) dx = -3.99976364996867, in 612 evaluations, reference = -4
