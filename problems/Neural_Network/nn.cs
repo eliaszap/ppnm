@@ -5,11 +5,24 @@ public class nn
     public int n; /* number of hidden neurons */
 	public vector parameters; /* network parameters */
 	Func<double,double> f; /* activation function */
+	Func<double,double> df; /* derivatived activation function */
+	Func<double,double> F; /* integrated/antiderivatived activation function */
 	
+	// constructor for A
 	public nn(int N, Func<double,double> F)
 	{
 		this.n = N;
 		this.f = F;
+		this.parameters = new vector(n*3);
+	}
+	// constructor for B
+	public nn(int N, Func<double,double> f,Func<double,double> dF,Func<double,double> F)
+	{
+		this.n = N;
+		this.f = f;
+		this.df = dF;
+		this.F = F;
+
 		this.parameters = new vector(n*3);
 	}
 	public vector getParams()
@@ -22,13 +35,10 @@ public class nn
 		double y = 0;
 		for(int i = 0; i<n; i++)
 		{
-			double a = parameters[i];
-			double b = parameters[i+1];
-			double w = parameters[i+2];
+			double a = parameters[3*i];
+			double b = parameters[3*i+1];
+			double w = parameters[3*i+2];
 			y += f((x-a)/b)*w;
-			// if(i == 1){
-			// 	Console.WriteLine($"{a} {b} {w} {y}");
-			//}
 		}
 		return y;
 	} 
@@ -44,8 +54,6 @@ public class nn
 			{
 				sum += Pow(feedforwad(x[k])-y[k],2);
 			};
-			// for(int i=0;i<n;i++)
-            //     sum += 0.001*(Pow(1/parameters[i*3+1],2) + Pow(parameters[i*3+2],2));
 			return sum;
 		};	
 			vector v = parameters.copy();
@@ -53,4 +61,33 @@ public class nn
 			int steps = minimization.qnewton(cost,ref v, eps );
 			parameters = v;
 	}
+	// feedforward that approximate the derivative
+	public double ff_derivative(double x)
+	{
+		double y_prime = 0;
+		for(int i = 0; i<n ; i++)
+		{
+			double a = parameters[3*i];
+			double b = parameters[3*i+1];
+			double w = parameters[3*i+2];
+			y_prime += df((x-a)/b)*w/b;
+		}
+		return y_prime;
+	}
+
+	// feedforward that approximate the antiderivative
+	public double ff_integrate(double x)
+	{
+		double y_master = 0;
+		for(int i = 0; i<n ; i++)
+		{
+			double a = parameters[3*i];
+			double b = parameters[3*i+1];
+			double w = parameters[3*i+2];
+			y_master += F((x-a)/b)*w*b;
+		}
+		return y_master;
+	}
+
+	
 }

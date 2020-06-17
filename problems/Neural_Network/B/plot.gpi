@@ -1,0 +1,31 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "x"
+set ylabel "y"
+set key top left
+set multiplot layout 2,2
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title " Minimizing fit Gaussian Wavelet Function x*exp(-x^2)"
+plot "xydata.txt" using ($1):($2) with points pt 7 title"data"\
+    , "fitdata.txt" using ($1):($2)  with lines title   "fit"
+
+#
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title "DerivativeFunction x*exp(-x^2)"
+plot "xydata.txt" using ($1):($3) with points pt 7 title"data"\
+    , "fitdata.txt" using ($1):($3)  with lines title   "fit"
+
+#
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title "Integral of a Gaussian Wavelet Function x*exp(-x^2)"
+plot "xydata.txt" using ($1):($4) with points pt 7 title"data"\
+    , "fitdata.txt" using ($1):($4)  with lines title   "fit"
+
+#
+unset multiplot

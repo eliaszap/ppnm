@@ -2,7 +2,7 @@ all: plot.svg
 
 plot.svg: plot.gpi xydata.txt fitdata.txt
 	gnuplot $<
-	
+
 out.txt xydata.txt fitdata.txt: main.exe
 	mono $<
 
