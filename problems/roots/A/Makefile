@@ -2,7 +2,7 @@ all: out.txt
 	cat out.txt
 
 out.txt: main.exe
-	mono $<
+	mono $< > out.txt
 
 main.exe: main.cs root.dll
 	mcs $< -reference:$(word 2,$^) $<
