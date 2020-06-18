@@ -1,0 +1,20 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "x"
+set ylabel "y"
+set key top left
+set multiplot layout 1,3 title "Cubic spline"
+
+set title "Interpolation:"
+plot "out-cinterp.txt" using ($1):($2) with points pt 7 title "Cubic"\
+    , "out-xy.txt" using ($1):($2) with lines title "Data"
+#
+set title "Integration"
+plot "out-cintegrate.txt" using ($1):($2) with points pt 7 title "Cubic"\
+    , "out-xy.txt" using ($1):($3) with lines title "Data"
+#
+set title "Derivative"
+plot "out-cderivative.txt" using ($1):($2) with points pt 7 title "Cubic"\
+    , "out-xy.txt" using ($1):($4) with lines title "Data"
+#
+unset multiplot

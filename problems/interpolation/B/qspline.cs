@@ -82,7 +82,7 @@ public class qspline
             else {j=m;}
         }
         
-        return b[i] + 2*(z-x[i]);
+        return b[i] + 2*c[i]*(z-x[i]);
     }
 
     /* evaluate the integral */
