@@ -19,7 +19,7 @@ public class main
             var mean = integration.mean;
             var sigma = integration.sigma;
             var acc_error = mean - accurate;
-            WriteLine($"{1/Sqrt(N)} {sigma} {acc_error}");
+            WriteLine($"{N} {4.15*sigma} {1/Sqrt(N)}");
         }
       
 

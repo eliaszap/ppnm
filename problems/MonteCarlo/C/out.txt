@@ -2,18 +2,18 @@ The two first functions of 'interesting functions' from A is now integrated with
 eps, acc = 0.01 because of runtime.
 The third function is greentexted in main.cs, but omitted because of runtime
 Integral of int_0^(π/2) int_0^(π/2) dxdy cos(x)*cos(y):
-Plain Monte carlo integrator                    : 0.998262707371301
-Stratified sampling integrator                  : 0.991495578759872
+Plain Monte carlo integrator                    : 0.99695585390554
+Stratified sampling integrator                  : 0.99238636791924
 Integration with CAS                            : 1
-Error on plain montecarlo                       : 0.00072123269492912
-Error on stratified sampling  montecarlo        : 0.00693346865450661
-Actual Error of stratified sampling to accurate : 0.0085044212401284 
+Error on plain montecarlo                       : 0.000721633973030531
+Error on stratified sampling  montecarlo        : 0.00697671482809838
+Actual Error of stratified sampling to accurate : 0.00761363208075982 
  
 Integral int_0^1 int_0^1 dxdy 1/2*(x^2+y^2):
-Plain Monte carlo integrator                    : 0.333320571067617
-Stratified sampling integrator                  : 0.32765443435997
+Plain Monte carlo integrator                    : 0.333047710191735
+Stratified sampling integrator                  : 0.327999637398673
 Integration with CAS                            : 0.333333333333333
-Error on plain montecarlo                       : 0.000210635467042275
-Error on stratified sampling  montecarlo        : 0.00702032126484595
-Actual Error of stratified sampling to accurate : 0.00567889897336343 
+Error on plain montecarlo                       : 0.000211045081779452
+Error on stratified sampling  montecarlo        : 0.00695908873727863
+Actual Error of stratified sampling to accurate : 0.00533369593466032 
  

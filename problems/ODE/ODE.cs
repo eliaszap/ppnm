@@ -11,7 +11,7 @@ public static class Ode{
 	}
 	
 
- static vector rkstep12(
+ public static vector rkstep12(
 	Func<double,vector,vector> f, /* the right-hand-side of dydt=f(t,y) */
 	double t,                     /* the current value of the variable */
 	vector yt,                    /* the current value y(t) of the sought function */

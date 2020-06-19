@@ -1,5 +1,5 @@
 all: plot1.svg 
-
+	cat out.txt
 plot1.svg: plot1.gpi timedata.txt
 	gnuplot $<
 out.txt timedata.txt : main.exe timedata.txt

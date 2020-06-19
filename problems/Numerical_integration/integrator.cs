@@ -18,7 +18,6 @@ public static class calc{
         double error = Abs(Q-q);
         if(error< acc+rel*Abs(Q))
         {
-            var r= nrec;
             return Q;
         }
         else

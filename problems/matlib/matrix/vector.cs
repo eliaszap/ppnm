@@ -75,6 +75,9 @@ public bool approx(vector o){
 	}
 
 public double norm(){
+	if(this[0] == 0 && size == 1){
+		return (double) 1e-7;
+	}
 	double meanabs=0;
 	for(int i=0;i<size;i++)meanabs+=Abs(this[i]);
 	meanabs/=size;

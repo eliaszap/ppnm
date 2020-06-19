@@ -9,6 +9,8 @@ main.exe: main.cs montecarlo.dll
 
 MATLIB = ../../matlib/
 S :=$(MATLIB)/matrix/vector.cs
+S +=$(MATLIB)/matrix/matrix.cs
+
 
 montecarlo.dll: ../montecarlo.cs $(S)
 	mcs -target:library -out:$@ $^

@@ -17,4 +17,4 @@ lsquares.dll: lsquares.cs $(S)
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f out* *.exe *.svg
+	rm -f out* *.exe *.svg *.dll

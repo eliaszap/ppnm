@@ -19,14 +19,14 @@ public class main
     {
         
         int N = 15;
-        Func<double,double> activate_func = (f) =>
-        {
-            // return Cos(f);
-            // return Sin(f);
-            return Exp(-f*f);
+        // Func<double,double> activate_func = (f) =>
+        // {
+        //     // return Cos(f);
+        //     // return Sin(f);
+        //     return Exp(-f*f);
 
-            // return Cos(5*f)*Exp(-f*f);
-        };
+        //     // return Cos(5*f)*Exp(-f*f);
+        // };
 
         Func<double,double> fit_func = (f) =>
         {

@@ -1,5 +1,5 @@
 all: plotA.svg
-
+	
 plotA.svg: plotA.gpi plotA.txt
 	gnuplot $<
 	
