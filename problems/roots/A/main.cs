@@ -25,7 +25,7 @@ public class main{
         WriteLine("Number of function calls: {0}",counter);
         WriteLine("");
 
-        //Rosenbrock's valley function
+        // Rosenbrock's valley function
         counter = 0;
         WriteLine("Extremum(s) of the Rosenbrock's valley function: f(x,y) = (1-x)^2 + 100(y-x^2)^2");
         Func<vector,vector> f = (z) =>
@@ -40,9 +40,9 @@ public class main{
         WriteLine(" ");
         var eps = 1e-3;
         counter = 0;
-        var start_1 = new vector(new double[] {1.0,1.0});
+        var start_1 = new vector(new double[] {0.5,0.5});
         var rosen_root = root.newton(f,start_1,eps);
-        rosen_root.print($"The root of Rosenbruck at starting point: (x,y) = ({start_1[0]},{start_1[1]}): ");
+        rosen_root.print($"The root of Rosenbruck: ");
         WriteLine("Number of functions calls: {0}",counter);
         // var start_2 = new vector(new double[] {1.1,0.5});
         // rosen_root = root.newton(f,start_2);

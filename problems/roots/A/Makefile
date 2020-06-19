@@ -11,6 +11,7 @@ MATLIB = ../../matlib
 S := $(MATLIB)/matrix/matrix.cs
 S += $(MATLIB)/matrix/vector.cs
 S += ../../linear_equation/qrdecompositionGS.cs
+S += ../ODE.cs
 root.dll: ../root.cs $(S)
 	mcs -target:library -out:$@ $^
 

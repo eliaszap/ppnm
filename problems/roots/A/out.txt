@@ -1,11 +1,11 @@
 Testing with the function f = 3x^2-9
 The root of 3x^2-9 is: 1.732 
 Anatically solved root: Sqrt(3) = 1.73205080756888
-Error: 1.04390200039717E-07 
-Number of function calls: 77
+Error: 2.47268427955305E-09 
+Number of function calls: 9
 
 Extremum(s) of the Rosenbrock's valley function: f(x,y) = (1-x)^2 + 100(y-x^2)^2
 The exact root is: (x,y) = (1,1)
  
-The root of Rosenbruck at starting point: (x,y) = (1,1): 1.000 1.000 
-Number of functions calls: 22
+The root of Rosenbruck: 1.000 1.000 
+Number of functions calls: 1401
