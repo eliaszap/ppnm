@@ -1,6 +1,51 @@
-Assignment B:
+B1: See plot 1
+Assignment B(2,3,4):
+A real symmetric matrix of size 5x5 A=
+    8.947     4.121     8.609     9.069     1.950 
+    4.121     6.752     0.347     0.951     9.343 
+    8.609     0.347     7.551     3.304     2.349 
+    9.069     0.951     3.304     4.493     9.818 
+    1.950     9.343     2.349     9.818     9.679 
 
-1: Number of operations for matrix diagonalization of matrix size nxn:
-Jacobi diagonalizing on a {100}x{100} matrix takes 0.05 seconds
-Jacobi diagonalizing on a {1000}x{1000} matrix takes 111 seconds
-The calculation has been omitted, but can be found in main.cs
+Assignment B.3: compare number of sweeps/rotations to find the lowest eigenvalue with value-by-value to diagonalize with cyclic:
+
+Diagonalized A with cyclic sweeps. D_cyc =
+   -8.521     0.000     0.000     0.000     0.000 
+    0.000     1.088     0.000     0.000     0.000 
+    0.000     0.000     3.658     0.000     0.000 
+    0.000     0.000     0.000    12.939     0.000 
+    0.000     0.000     0.000     0.000    28.257 
+The eignenvalues from the diagonalizing of A with cyclic sweeps:-8.521 1.088 3.658 12.939 28.257 
+Number of rotations           : 40
+
+First row and column of A Diagonalized with value by valye. D_val =
+   -8.521     0.000     0.000     0.000     0.000 
+    0.000    12.335     6.050     5.263     9.577 
+    0.000     6.050    11.213     4.285    -0.341 
+    0.000     5.263     4.285     6.857     5.709 
+    0.000     9.577    -0.341     5.709    15.537 
+Finding first eigenvalue of A with value by value: e_0 = -8.52140551590404
+Number of rotations         : 62
+Thus value by value uses 22 more rotations to find the first eigenvalue. 
+
+Assignment B.4:
+Full Diagonalized A with value by valye. D_valmax =
+   -8.521     0.000     0.000     0.000     0.000 
+    0.000     1.088     0.000     0.000     0.000 
+    0.000     0.000     3.658     0.000     0.000 
+    0.000     0.000     0.000    12.939     0.000 
+    0.000     0.000     0.000     0.000    28.257 
+Finding all eigenvalues of A with value by value: es= -8.521 1.088 3.658 12.939 28.257 
+Number of rotations         : 160
+Thus value by value uses 120 more rotations to find all the eigenvalues. 
+
+Assignment B.5:
+Full Diagonalized A with value by valye with highest eigenvalues sorted first. D_high =
+   28.257     0.000     0.000     0.000     0.000 
+    0.000    12.939     0.000     0.000     0.000 
+    0.000     0.000     3.658     0.000     0.000 
+    0.000     0.000     0.000     1.088     0.000 
+    0.000     0.000     0.000     0.000    -8.521 
+Finding all eigenvalues of A with value by value sorted with highest first: e_high= 28.257 12.939 3.658 1.088 -8.521 
+Finding all eigenvalues of A with value by value sorted with loweest first: e_low= -8.521 1.088 3.658 12.939 28.257 
+

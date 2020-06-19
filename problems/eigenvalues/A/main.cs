@@ -4,7 +4,7 @@ using static System.Math;
 class main{
 
     static int Main(){
-        var jacobi = new jacobi();
+        // var jacobi = new jacobi();
         var rand = new Random(1);
         int n=20, m=6;
         matrix A = new matrix(m,m);
@@ -38,19 +38,25 @@ class main{
         
         vector egenvals = jacobi.jac_cycsweep(H,H_V);
 
+        WriteLine("Checking if energies are correct:");
+        WriteLine("k    Calculated        Exact");
         for (int k=0; k < n/3; k++){
             double exact = PI*PI*(k+1)*(k+1);
             double calculated = egenvals[k];
             WriteLine($"{k} {calculated} {exact}");
         }   
-
+        
+        System.IO.StreamWriter[] datas = new System.IO.StreamWriter[3];
         for(int k=0;k<3;k++){
-            WriteLine($"{0} {0}");
+            datas[k] = new  System.IO.StreamWriter($"d{k+1}.txt");
+            datas[k].WriteLine($"{0} {0}");
             for(int i=0;i<n;i++){
-                WriteLine($"{(i+1.0)/(n+1)} {H_V[i,k]}");
+                datas[k].WriteLine($"{(i+1.0)/(n+1)} {H_V[i,k]}");
             }   
-            WriteLine($"{1} {0}");
+            datas[k].WriteLine($"{1} {0}");
+            datas[k].Close();
         }
+        // data.Close();
         return 0;
     }
 }

@@ -1,0 +1,12 @@
+set term svg background rgb "white"
+set out "plot.svg"
+set xlabel "x"
+set ylabel " y"
+set key bottom right
+set tics out
+set xzeroaxis
+set yzeroaxis
+set title "Neural Network minimizing a Wavelet Function."
+plot  "d1.txt" using ($1):($2) with lines  title "k = 0"\
+, "d2.txt" using ($1):($2) with lines  title "k = 1"\
+, "d3.txt" using ($1):($2) with lines  title "k = 2"

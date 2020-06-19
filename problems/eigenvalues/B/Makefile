@@ -1,7 +1,8 @@
-all: out.txt
-	cat out.txt
+all: plot1.svg 
 
-out.txt: main.exe
+plot1.svg: plot1.gpi timedata.txt
+	gnuplot $<
+out.txt timedata.txt : main.exe timedata.txt
 	mono $< > out.txt
 
 main.exe: main.cs jaobi.dll
@@ -14,4 +15,4 @@ jaobi.dll: ../jaobi.cs  $(S)
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm -f rm *.exe out* *.svg *.dll
+	rm -f rm *.exe out* *.svg *.dll timedata.txt
